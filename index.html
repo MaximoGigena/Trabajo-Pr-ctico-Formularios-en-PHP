@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <form id="contactForm" action="procesar_formulario.php" method="POST">
+
+    <!-- SEO básico -->
+    <meta name="description" content="La mejor tienda para consentir a tu mascota. Juguetes, comida, accesorios y más. ¡Envíos a todo el país!" />
+    <meta name="keywords" content="mascotas, tienda de mascotas, juguetes, alimentos, perros, gatos, accesorios" />
+    <meta name="author" content="Tienda El Perrito Feliz" />
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2017/05/15/23/44/heart-icon-2316451_960_720.png" type="image/x-icon" />
+
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css" />
+    <!-- Título -->
+    <title>🐶🐶Tienda El Perrito Feliz🐶🐶</title>
+  </head>
+  <body>
+    <header>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="https://cdn.pixabay.com/photo/2016/10/10/14/13/dog-1728494_960_720.png"
+             alt="Logo del sitio"
+             title="Tienda El Perrito Feliz"
+             style="height: 150px" />
+      </a>
+      <h1 id="tituloPrincipal">Tienda "El Perrito Feliz"</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#ofertas">Ofertas</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#tabla">Catálogo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="https://www.senasa.gob.ar/" target="_blank">SENASA</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="inicio" class="bienvenida">
+        <h2>Bienvenidos a nuestra tienda</h2>
+        <p>Tenemos todo lo que tu mascota necesita.</p>
+        <ol title="Ventajas de comprar aquí">
+          <li>Envíos rápidos a todo el país</li>
+          <li>Precios competitivos</li>
+          <li>Atención especializada</li>
+        </ol>
+      </section>
+
+      <div class="contenido-principal">
+        <section id="ofertas">
+          <h2>Ofertas de la semana</h2>
+          <article id="ofertaPrincipal">
+            <h3 lang="es" title="Oferta destacada">Combo de juguetes</h3>
+            <p>Llévate 3 juguetes para tu perro o gato por el precio de 2. ¡Solo esta semana!</p>
+            <a href="https://www.youtube.com/watch?v=2ePJtjHXY3M">
+              <img src="https://cdn.pixabay.com/photo/2014/04/03/10/32/bone-310802_1280.png"
+                   alt="Juguetes para mascotas"
+                   title="Juguetes para mascotas"
+                   style="max-width: 20%" />
+            </a>
+            <p>¡No te lo pierdas!</p>
+          </article>
+        </section>
+
+        <aside id="productos" class="barra-lateral">
+          <h3>Categorías populares</h3>
+          <ul>
+            <a href="https://listado.mercadolibre.com.ar/alimentos#D[A:alimentos]"><li>Alimentos</li></a>
+            <a href="https://listado.mercadolibre.com.ar/juguetes-mascota#D[A:juguetes%20mascota]"><li>Juguetes</li></a>
+            <a href="https://listado.mercadolibre.com.ar/accesorios-mascotas#D[A:accesorios%20mascotas]"><li>Accesorios</li></a>
+            <a href="https://listado.mercadolibre.com.ar/higiene-mascotas?sb=all_mercadolibre#D[A:higiene%20mascotas]"><li>Higiene y salud</li></a>
+          </ul>
+        </aside>
+      </div>
+
+      <section id="tabla">
+        <h2>Catálogo de Productos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Tipo</th>
+              <th>Precio</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alimento Premium 10kg</td>
+              <td>Perro</td>
+              <td>$7500</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+              <td>Rascador para gatos</td>
+              <td>Gato</td>
+              <td>$4300</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Formulario de contacto -->
+      <section id="formulario-contacto" class="formulario-contacto">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+          <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          
+          <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <p id="emailError" class="mensaje-error" style="display: none;">El email no es válido</p>
+          </div>
+          
+          <div>
+            <label for="asunto">Asunto:</label>
+            <select id="asunto" name="asunto" required>
+              <option value="">Seleccione un asunto</option>
+              <option value="consulta">Consulta general</option>
+              <option value="pedido">Estado de pedido</option>
+              <option value="devolucion">Devolución o reclamo</option>
+            </select>
+          </div>
+          
+          <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <p id="contador" class="contador-caracteres">0 caracteres</p>
+          </div>
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <!-- Caja para el efecto hover -->
+      <div class="caja" id="caja-interactiva"></div>
+    </main>
+
+    <footer id="contacto">
+      <p>Contacto: tienda@elperritofeliz.com</p>
+      <p>© 2025 Tienda El Perrito Feliz. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      // Función validarEmail
+      function validarEmail(email) {
+        // Expresión regular simple para validar email
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      }
+
+      // Función calcularDescuento
+      function calcularDescuento(precio, porcentaje) {
+        const descuento = precio * (porcentaje / 100);
+        return precio - descuento;
+      }
+
+      // Función generarMensaje
+      function generarMensaje(nombre, asunto) {
+        return `Gracias ${nombre} por contactarnos sobre ${asunto}. Te responderemos pronto.`;
+      }
+
+      // Manipulación del DOM - Contador de caracteres
+      document.addEventListener('DOMContentLoaded', function() {
+        const textarea = document.getElementById('mensaje');
+        const contador = document.getElementById('contador');
+        
+        textarea.addEventListener('input', function() {
+          contador.textContent = `${this.value.length} caracteres`;
+        });
+
+        // Manipulación del DOM - Cambiar estilo de caja al pasar el mouse
+        const caja = document.getElementById('caja-interactiva');
+        
+        caja.addEventListener('mouseover', function() {
+          this.style.backgroundColor = 'blue';
+        });
+        
+        caja.addEventListener('mouseout', function() {
+          this.style.backgroundColor = '#ddd';
+        });
+
+        // Validación del formulario
+        const form = document.getElementById('contactForm');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+        
+        emailInput.addEventListener('blur', function() {
+          if (!validarEmail(this.value)) {
+            this.classList.add('error');
+            emailError.style.display = 'block';
+          } else {
+            this.classList.remove('error');
+            emailError.style.display = 'none';
+          }
+        });
+        
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Validar email nuevamente antes de enviar
+          if (!validarEmail(emailInput.value)) {
+            emailInput.classList.add('error');
+            emailError.style.display = 'block';
+            return;
+          }
+          
+          // Obtener valores del formulario
+          const nombre = document.getElementById('nombre').value;
+          const asunto = document.getElementById('asunto').value;
+          
+          // Generar y mostrar mensaje en consola
+          const mensaje = generarMensaje(nombre, asunto);
+          console.log(mensaje);
+          
+          // Mostrar mensaje de éxito (simulado)
+          alert('Formulario enviado con éxito. ' + mensaje);
+          
+          // Resetear formulario
+          this.reset();
+          contador.textContent = '0 caracteres';
+        });
+
+        // Probar función calcularDescuento con 3 valores distintos
+        console.log('Precio con descuento (100, 10):', calcularDescuento(100, 10));
+        console.log('Precio con descuento (500, 20):', calcularDescuento(500, 20));
+        console.log('Precio con descuento (1000, 30):', calcularDescuento(1000, 30));
+      });
+    </script>
+  </body>
+</html>
